@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: zhicui
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/status
+    envVars:
+      - key: LLM_BASE_URL
+        sync: false
+      - key: LLM_API_KEY
+        sync: false
+      - key: LLM_MODEL
+        value: deepseek-ai/DeepSeek-V3
+      - key: ASR_BASE_URL
+        sync: false
+      - key: ASR_API_KEY
+        sync: false
+      - key: ASR_MODEL
+        value: FunAudioLLM/SenseVoiceSmall
+      - key: DATA_DIR
+        value: /app/data
+      - key: PYTHONUNBUFFERED
+        value: "1"

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>知萃 · 视频与文档知识点提炼</title>
+  <meta name="description" content="把网课视频和资料文档提炼成可复习的知识点与题组">
+  <link rel="stylesheet" href="/static/css/app.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231c6b5b'/%3E%3Cpath d='M9 10h14M9 16h14M9 22h9' stroke='%23fff' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <a class="brand" href="#/videos">
+        <span class="brand-mark">萃</span>
+        <span class="brand-text">知萃<small>ZHI CUI</small></span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="#/videos" data-nav="videos">视频学习</a>
+        <a href="#/live" data-nav="live">实时听课</a>
+        <a href="#/documents" data-nav="documents">文档题库</a>
+        <a href="#/knowledge" data-nav="knowledge">知识库</a>
+      </nav>
+      <div class="side-foot">
+        <button class="status-chip" id="status-chip" type="button">
+          <i class="dot"></i><span id="status-text">检测中</span>
+        </button>
+        <p class="side-hint">本地运行 · 数据保存在本机 SQLite</p>
+      </div>
+    </aside>
+    <main class="main" id="view" aria-live="polite"></main>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <div class="modal hidden" id="modal" role="dialog" aria-modal="true"></div>
+  <script type="module" src="/static/js/app.js"></script>
+</body>
+</html>
